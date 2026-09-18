@@ -66,7 +66,7 @@ h1{
 
 .hero article img{
     float: right;
-    width: 50px;
+    width: 250px;
 }
 
 .hero h1{
@@ -77,3 +77,14 @@ h1{
     position: absolute;
 }
 
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socialmedia img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
