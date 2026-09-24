@@ -1,90 +1,253 @@
-:root{
+:root {
     --primary-color: #055a05;
     --secondary-color: #f4a261;
-    --acent1-color: #264653;
+    --accent1-color: #264653;
     --accent2-color: #e9c46a;
-    --heading-font: 'TIMES NEW ROMAN', serif;
-    --body-font: 'Ariel',Helvetica, sans-serif;
+
+    --heading-font: "Times New Roman", serif;
+    --body-font: Arial, Helvetica, sans-serif;
 }
 
-heaader{
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
-
-body{
+body {
     font-family: var(--body-font);
-    color: var(--acent1-color);
+    color: var(--accent1-color);
 }
 
-header,main,footer{
+header {
     width: 840px;
     margin: 0 auto;
-    
+    padding: 20px;
+
+    background-color: var(--primary-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-h1,h2{
-    font-family: var(--heading-font);
-    color: var(--secondary-color);
-}
-
-nav,p,section,article{
-    margin:16px;
-    padding:8px;
-}
-
-.socialmedia a{
-    text-decoration: none;
-}
-
-.hero{
-    position:relative;
-}
-
-.hero img{
-    display: block;
-    width: 100%;
+header img {
+    width: 100px;
     height: auto;
 }
 
-h1{
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
+header nav ul {
+    list-style: none;
+
+    display: flex;
+}
+
+header nav li {
+    border: 1px solid #555;
+}
+
+header nav a {
+    display: block;
+
+    padding: 8px 30px;
+
+    background-color: white;
+    color: black;
+
+    text-decoration: none;
+}
+
+header nav a:hover {
+    background-color: var(--accent2-color);
+}
+
+main {
+    width: 840px;
+    margin: 10px auto;
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+}
+
+h2 {
+    color: black;
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--acent1-color);
-    color:#fff
 }
 
-.hero article img{
+.hero {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.hero > img {
+    display: block;
+
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+}
+
+.hero h1 {
+    position: absolute;
+
+    top: 10px;
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 8px;
+
+    color: black;
+    background-color: transparent;
+}
+
+.hero article {
+    position: absolute;
+
+    top: 48px;
+    left: 28px;
+
+    width: 784px;
+    height: 95px;
+
+    padding: 15px;
+
+    background-color: white;
+
+    border: 1px solid #777;
+}
+
+.hero article img {
     float: right;
-    width: 250px;
+
+    width: 45px;
+    height: 60px;
+
+    object-fit: cover;
+
+    margin-left: 15px;
 }
 
-.hero h1{
-    position: absolute;
+.hero article p {
+    font-size: 13px;
+    color: black;
 }
 
-.hero article{
-    position: absolute;
+.history {
+    padding: 12px 30px 25px;
+
+    border: 1px solid #777;
+
+    margin-bottom: 12px;
+}
+
+.history h2 {
+    margin-bottom: 5px;
+}
+
+.history-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+.history-content img {
+    width: 140px;
+    height: 88px;
+
+    object-fit: cover;
+
+    justify-self: center;
+}
+
+.history-content p {
+    font-size: 12px;
+    line-height: 1.3;
+
+    color: black;
+}
+
+.adventure {
+    padding: 10px 30px 20px;
+
+    border: 1px solid #777;
+
+    margin-bottom: 12px;
+}
+
+.adventure h2 {
+    margin-bottom: 12px;
+}
+
+.adventure-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 15px;
+
+    text-align: center;
+}
+
+.adventure-gallery figure {
+    margin: 0;
+}
+
+.adventure-gallery img {
+    width: 88px;
+    height: 82px;
+
+    object-fit: cover;
+}
+
+.adventure-gallery figcaption {
+    margin-top: 3px;
+
+    font-size: 12px;
+
+    color: black;
+}
+
+footer {
+    width: 840px;
+    margin: 0 auto;
+
+    padding: 12px 25px;
+
+    background-color: var(--primary-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer p {
+    color: white;
+    font-size: 12px;
 }
 
 .socialmedia {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+    display: flex;
+
+    gap: 10px;
+}
+
+.socialmedia a {
+    text-decoration: none;
 }
 
 .socialmedia img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
+    width: 32px;
+    height: 32px;
+
+    object-fit: contain;
 }
